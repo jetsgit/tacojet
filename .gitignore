@@ -18,3 +18,8 @@
 config/database.yml
 ._*
 .DS_Store
+*.swp
+*.swo
+.powenv
+.ruby-gemset
+.ruby-version
