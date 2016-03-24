@@ -2,20 +2,16 @@
 
 <% @questions.each do |q| %>
   <div>
-    <span class='q'><%= q.id %>:&nbsp;</span>
-    <span class='question'><%= q.question.html_safe %></span>
+    <%= content_tag 'span', q.id , class: 'question' %>
+    <%= content_tag 'span', q.question, class: 'question' %>
   </div>
   <div class='output'>
-    <pre>
-<%= q.output.strip!.html_safe %>
-    </pre>
+    <%= content_tag 'pre', q.output.strip! %>
   </div>
   <div class='answer'>
     <button class='show-answer'>Show Answer</button>
     <% q.answers.each do |a| %>
-      <div class='answer-content'>
-        <%= a.answer.gsub("\n","<br/>").html_safe %>
-      </div>
+      <%= content_tag 'div',  a.answer.gsub("\n","<br/>").html_safe, class: 'answer-content' %>
     <% end %>
   </div>
   <hr/>
