@@ -13,6 +13,8 @@ gem 'text-table'
 
 group :development, :test do
   gem 'pry-rails'
+  # gem 'pry-byebug'
+  gem 'pry-remote'
   # gem 'spring'
   gem 'rails_best_practices'
   gem 'rubocop', require: false

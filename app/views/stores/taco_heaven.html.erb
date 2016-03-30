@@ -1,0 +1,17 @@
+<table  class="taco">
+  <th>Tacos</th>
+  <% @tacos.each do |taco| %>
+    <tr><td>
+        <%= taco.name %>
+    </td></tr>
+  <% end %>  
+<tr>
+  <td><br /></td>
+</tr>
+<th>Salsas</th>
+  <% @salsas.each do |salsa| %>
+    <tr><td>
+    <%= salsa.name %>
+    </td></tr>
+  <% end %>
+</table>
