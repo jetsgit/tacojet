@@ -13,12 +13,12 @@ gem 'text-table'
 
 group :development, :test do
   gem 'pry-rails'
-  # gem 'pry-byebug'
   gem 'pry-remote'
   # gem 'spring'
   gem 'rails_best_practices'
   gem 'rubocop', require: false
   gem 'brakeman'
   gem 'awesome_print'
+  gem 'minitest-reporters', '~> 1.1.8'
 end
 

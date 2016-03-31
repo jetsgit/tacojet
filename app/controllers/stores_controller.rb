@@ -11,8 +11,6 @@ class StoresController < ApplicationController
   end
 
   def tacos_salsas
-    @tacos = Taco.all
-    @salsas = Salsa.all
   end
 
   private

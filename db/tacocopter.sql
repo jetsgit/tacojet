@@ -18,14 +18,6 @@ BEGIN;
     zagat_rating int
   );
 
-  DROP TABLE IF EXISTS car_washes CASCADE;
-  CREATE TABLE car_washes
-  (
-    id serial PRIMARY KEY,
-    store_id int UNIQUE REFERENCES stores,
-    hot_wax boolean,
-    full_detail boolean
-  );
 
   DROP TABLE IF EXISTS tacos CASCADE;
   CREATE TABLE tacos
@@ -118,11 +110,6 @@ BEGIN;
   (8, 'Lily''s Devil Worship'),
   (9, 'Sweet Mango and Radish');
 
-  INSERT INTO car_washes(store_id, hot_wax, full_detail) VALUES
-  (1, true, false),
-  (9, false, false),
-  (11, true, true),
-  (17, true, true);
 
   INSERT INTO stores_tacos (store_id, taco_id, price) VALUES
   (1, 1, 3.50),
@@ -295,6 +282,3 @@ INSERT INTO stores_salsas (store_id, salsa_id, spiciness) VALUES
   (11, 6, 2);
 
 COMMIT;
-
-
-
