@@ -1,11 +1,10 @@
-require 'pry-remote'
 class StoresController < ApplicationController
   def index
 
   end
 
   def taco_heaven
-    # binding.remote_pry
+    byebug
     set_salsas
     set_tacos
   end
