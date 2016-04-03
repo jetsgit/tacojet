@@ -24,3 +24,5 @@
 .ruby-gemset
 .ruby-version
 tags
+.zeus.sock
+.byebug_history

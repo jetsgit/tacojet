@@ -12,10 +12,9 @@ gem 'rails_12factor'
 gem 'text-table'
 
 group :development, :test do
-  gem 'pry-rails'
-  gem 'byebug'
-  # gem 'pry-remote'
-  # gem 'spring'
+  gem 'pry-rails', '0.3.4'
+  gem 'pry-byebug', '3.3.0'
+  gem 'byebug', '8.2.2'
   gem 'rails_best_practices'
   gem 'rubocop', require: false
   gem 'brakeman'

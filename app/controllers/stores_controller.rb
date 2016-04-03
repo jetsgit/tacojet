@@ -1,10 +1,8 @@
 class StoresController < ApplicationController
   def index
-
   end
 
   def taco_heaven
-    byebug
     set_salsas
     set_tacos
   end
