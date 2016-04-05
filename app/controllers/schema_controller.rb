@@ -1,2 +1,0 @@
-class SchemaController < ApplicationController
-end
