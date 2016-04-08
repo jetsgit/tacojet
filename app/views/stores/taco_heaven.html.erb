@@ -1,17 +1,12 @@
 <table  class="taco">
-  <th>Tacos</th>
-  <% @tacos.each do |taco| %>
+  <th>Stores with Requested Tacos and Salsas</th>
+  <% @lunch.each do |lunch| %>
     <tr><td>
-        <%= taco.name %>
-    </td></tr>
+        <%= lunch.name %>
+      </td>
+      <td>
+        <%= lunch.city.name%>
+      </td>
+    </tr>
   <% end %>  
-<tr>
-  <td><br /></td>
-</tr>
-<th>Salsas</th>
-  <% @salsas.each do |salsa| %>
-    <tr><td>
-    <%= salsa.name %>
-    </td></tr>
-  <% end %>
 </table>
