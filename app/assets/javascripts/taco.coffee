@@ -1,8 +1,8 @@
-jQuery ->
+jQuery.ready   ->
   $('#taco_salsa_select').validate ->
     debug: true
     rules:
-      "taco_ids[]": 
-        required: true 
-      "salsa_ids[]":
-        required: true
+      'taco_ids[]': 
+        onecheck: true 
+      'checkbox:salsa_ids[]':
+        onecheck: true
