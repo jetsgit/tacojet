@@ -45,11 +45,8 @@ class StoresController < ApplicationController
   def finder_type(ingredient, item_id, store)
     check = [store, item_id.to_i]
     if ingredient == 'salsa'
-      # StoreSalsa.store_has_salsa item_id, store
-      # binding.pry
       @store_salsa_ids.include? check
     elsif ingredient == 'taco'
-      # StoreTaco.store_has_taco item_id, store
       @store_taco_ids.include? check  
     else
       raise ArgumentError, "Arg for ingredient can only be salsa or taco"
