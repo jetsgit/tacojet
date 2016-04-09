@@ -1,37 +1,35 @@
-ENV["RAILS_ENV"] = "test"
-require File.expand_path("../../config/environment", __FILE__)
+ENV['RAILS_ENV'] = 'test'
+require File.expand_path('../../config/environment', __FILE__)
+require 'minitest/reporters'
+require 'minitest/spec'
+require 'rails/test_help'
+require 'shoulda/context'
+require 'shoulda/matchers'
 
-# require "minitest-rails"
-require "minitest/reporters"
-require "minitest/spec"
-require "rails/test_help"
-require "shoulda/context"
-require "shoulda/matchers"
-
-class ActiveSupport::TestCase
-  fixtures :all
-  extend Minitest::Spec::DSL
+module  ActiveSupport
+  class TestCase
+    fixtures :all
+    extend Minitest::Spec::DSL
+  end
 end
 
+module ActiveSupport
+  class TestCase
+    ActiveRecord::Migration.check_pending!
+    # Note: You'll currently still have to declare
+    # fixtures explicitly in integration tests
 
-class ActiveSupport::TestCase
-  ActiveRecord::Migration.check_pending!
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
+    fixtures :all
+    extend MiniTest::Spec::DSL
 
-  fixtures :all
-  extend MiniTest::Spec::DSL
-
-  register_spec_type self do |desc|
-    desc < ActiveRecord::Base if desc.is_a? Class
+    register_spec_type self do |desc|
+      desc < ActiveRecord::Base if desc.is_a? Class
+    end
   end
 end
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
-    # with.library :active_record
-    # with.library :active_model
-    # with.library :action_controller
-    # with.test_framework :minitest_5
     with.library :rails
   end
 end
@@ -39,9 +37,9 @@ end
 module Minitest
   module Reporters
     class AwesomeReporter < DefaultReporter
-      GRAY = '0;36'
-      GREEN = '1;32'
-      RED = '1;31'
+      GRAY = '0;36'.freeze
+      GREEN = '1;32'.freeze
+      RED = '1;31'.freeze
 
       def initialize(options = {})
         super
@@ -57,7 +55,7 @@ module Minitest
       end
 
       def color_up(string, color)
-        color? ? "\e\[#{ color }m#{ string }#{ ANSI::Code::ENDCODE }" : string
+        color? ? "\e\[#{color}m#{string}#{ANSI::Code::ENDCODE}" : string
       end
 
       def red(string)
@@ -75,5 +73,6 @@ module Minitest
   end
 end
 
-reporter_options = { color: true} #  , slow_count: 5 
-Minitest::Reporters.use! [Minitest::Reporters::AwesomeReporter.new(reporter_options)]
+reporter_options = { color: true } #  , slow_count: 5
+Minitest::Reporters.use! \
+  [Minitest::Reporters::AwesomeReporter.new(reporter_options)]
