@@ -1,5 +1,4 @@
-(function($) {
-  $.fn.TacoError = function() {
+$.fn.TacoError = function() {
     $("#taco_salsa_select").validate({
       rules: {
         "taco_ids[]": {
@@ -16,7 +15,8 @@
       errorPlacement: function(label, element) {
         label.addClass('taco-warning');
         $(element).parent().append(label);
+
       }
+      
     });
-  };
-})(jQuery);
+  }

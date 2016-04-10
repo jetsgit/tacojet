@@ -1,27 +1,32 @@
 <%= form_for :tacos, url: taco_heaven_path, html: {id: "taco_salsa_select"} do |f| %>
-<% Taco.all.each do |taco| %>
+  <table>
+    <tr>
+      <th>Taco:</th>
+    </tr>
+  <% Taco.all.each do |taco| %>
+    <tr>
+      <td>
+        <%=  check_box_tag "taco_ids[]", taco.id %>
+        <%= taco.name  %>
+      </td>
+    </tr>
+  <% end %>
+    <tr>
+      <th>Salsa:</th>
+    </tr>
+  <% Salsa.all.each do |salsa| %>
+    <tr>
+      <td>
+        <%=  check_box_tag  "salsa_ids[]", salsa.id %>
+        <%= salsa.name  %>
+      </td>
+    </tr>
+  <% end %>
   <tr>
-    <td>
-      <%=  check_box_tag "taco_ids[]", taco.id %>
-      <%= taco.name  %>
-    </td>
+    <td><br /></td>
   </tr>
-<% end %>
   <tr>
-    <th>Salsa:</th>
+    <th>&nbsp;<%= f.submit "Search" %></th>
   </tr>
-<% Salsa.all.each do |salsa| %>
-  <tr>
-    <td>
-      <%=  check_box_tag  "salsa_ids[]", salsa.id %>
-      <%= salsa.name  %>
-    </td>
-  </tr>
-<% end %>
-<tr>
-  <td><br /></td>
-</tr>
-<tr>
-  <th>&nbsp;<%= f.submit "Search" %></th>
-</tr>
+  </table> 
 <% end %>

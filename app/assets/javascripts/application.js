@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.validate
-//= require jquery.validate.additional-methods
+//= require jquery-validation
+//= require jquery-additional-methods
 //= require_tree .
