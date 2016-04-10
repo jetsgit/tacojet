@@ -1,7 +1,7 @@
 <%= form_for :tacos, url: taco_heaven_path, html: {id: "taco_salsa_select"} do |f| %>
 <div class="container">
   <div class="tacos">
-    <h2>Tacos:</h2>
+    <h2 class="store-tacos">Tacos:</h2>
     <table>
     <% Taco.all.each do |taco| %>
       <tr>
@@ -14,7 +14,7 @@
     </table>
   </div>
   <div class="salsas">
-    <h2>Salsas:</h2>
+    <h2 class="store-tacos">Salsas:</h2>
     <table>
     <% Salsa.all.each do |salsa| %>
       <tr>

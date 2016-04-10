@@ -15,7 +15,7 @@ div.tacos {
 
 div.salsas {
   position: relative;
-  left: 100px
+  left: 60px
 }
 
 div.taco-heaven {
@@ -37,6 +37,17 @@ h2.found-stores {
   margin-bottom: 30px
 }
 
+h2.store-tacos {
+  margin-bottom: 20px
+}
 .taco td {
   padding-right: 30px
+}
+
+.taco th {
+  padding-bottom: 20px
+}
+
+td {
+  width: 360px
 }

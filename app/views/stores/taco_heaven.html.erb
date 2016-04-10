@@ -2,6 +2,10 @@
    
     <h2 class="found-stores">Stores with Requested Tacos and Salsas</h2>
   <table  class="taco">
+    <tr>
+      <th>Store</th>
+      <th>City</th>
+    </tr>
     <% @lunch.each do |lunch| %>
       <tr><td>
           <%= lunch.name %>
