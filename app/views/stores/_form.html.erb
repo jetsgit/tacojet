@@ -3,7 +3,7 @@
   <div class="tacos">
     <h2 class="store-tacos">Tacos:</h2>
     <table>
-    <% Taco.all.each do |taco| %>
+    <% @tacos.each do |taco| %>
       <tr>
         <td>
           <%=  check_box_tag "taco_ids[]", taco.id %>
@@ -16,7 +16,7 @@
   <div class="salsas">
     <h2 class="store-tacos">Salsas:</h2>
     <table>
-    <% Salsa.all.each do |salsa| %>
+    <% @salsas.each do |salsa| %>
       <tr>
         <td>
           <%=  check_box_tag  "salsa_ids[]", salsa.id %>
