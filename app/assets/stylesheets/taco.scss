@@ -7,3 +7,36 @@ table.taco td {
   font-weight: bold;
   padding-left: 40px
 }
+
+div.tacos {
+  position: relative;
+  float: left
+}
+
+div.salsas {
+  position: relative;
+  left: 100px
+}
+
+div.taco-heaven {
+  position: relative;
+  top: 60px;
+  left: 300px
+}
+
+div.container {
+  position: relative;
+  top: 40px;
+  left: 300px
+}
+h2 {
+  margin: 0
+}
+
+h2.found-stores {
+  margin-bottom: 30px
+}
+
+.taco td {
+  padding-right: 30px
+}

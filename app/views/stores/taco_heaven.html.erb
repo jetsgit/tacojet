@@ -1,12 +1,15 @@
-<table  class="taco">
-  <th>Stores with Requested Tacos and Salsas</th>
-  <% @lunch.each do |lunch| %>
-    <tr><td>
-        <%= lunch.name %>
-      </td>
-      <td>
-        <%= lunch.city.name%>
-      </td>
-    </tr>
-  <% end %>  
-</table>
+<div class="taco-heaven">
+   
+    <h2 class="found-stores">Stores with Requested Tacos and Salsas</h2>
+  <table  class="taco">
+    <% @lunch.each do |lunch| %>
+      <tr><td>
+          <%= lunch.name %>
+        </td>
+        <td>
+          <%= lunch.city.name%>
+        </td>
+      </tr>
+    <% end %>  
+  </table>
+</div>
