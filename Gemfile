@@ -6,6 +6,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
 gem 'jbuilder', '~> 2.0'
 
 gem 'rails_12factor'

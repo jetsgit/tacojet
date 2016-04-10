@@ -1,5 +1,9 @@
 class StoresController < ApplicationController
   before_action :setup, only: [:taco_heaven]
+
+  def tacos_salsas
+  end
+
   def taco_heaven
     check_stores @salsas, 'salsa'
     check_stores @tacos, 'taco'

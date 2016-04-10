@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root controller: 'stores', action: :tacos_salsas
 
-  resources :questions
   resources :coding_challenge, only: [:index]
 
   resources :stores

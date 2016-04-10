@@ -1,59 +1,11 @@
-<%= form_for :tacos, url: taco_heaven_path, html: {id: "taco_salsa_select"} do |f| %>
-  <table>
-    <tr>
-      <th>&nbsp;</th>
-      <th>Taco:
-    </tr>
-  <% Taco.all.each do |taco| %>
-    <tr>
-      <td>
-        <%=  check_box_tag "taco_ids[]", taco.id %>
-        <%= taco.name  %>
-      </td>
-    </tr>
-  <% end %>
-    <tr>
-      <th>&nbsp;</th>
-      <th>Salsa:
-    </tr>
-  <% Salsa.all.each do |salsa| %>
-    <tr>
-      <td>
-        <%=  check_box_tag  "salsa_ids[]", salsa.id %>
-        <%= salsa.name  %>
-      </td>
-    </tr>
-  <% end %>
+<table>
   <tr>
-    <td><br /></td>
+    <th>Taco:</th>
   </tr>
-  <tr>
-    <th>&nbsp;<%= f.submit "Search" %></th>
-  </tr>
-<% end %>
-  </table>      
-
+<%= render "form" %>
+</table>      
 <script type="text/javascript">
-  $().ready(function() {
-    $("#taco_salsa_select").validate({
-      rules: {
-        "taco_ids[]": {
-          required : true
-        },
-        "salsa_ids[]": {
-          required : true
-        }
-      },
-      messages: {
-        "taco_ids[]" : "Select a Taco or 2",
-        "salsa_ids[]": "Grab some Salsa!"
-      },
-      errorPlacement: function(label, element) {
-        label.addClass('taco-warning');
-        $(element).parent().append(label);
-
-      }
-      
-    });
-  });
+(function($) {
+  $().TacoError();
+})( jQuery );
 </script>
