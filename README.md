@@ -1,19 +1,49 @@
-# tacocopter-sql-workshop
+TACOCOPTER
+=========
 
-## Setup
+### A demo of using has_many through, belongs_to relationships. Also demo of feature testing with Capybara.
 
-First create a `config/database.yml` file that's compatible with your local environment. If you're using the Procore UDE, just copy the file from your Procore repo. Then run
+* Ruby v.2.2.2p95
+* Rails v.4.2.5.2
+* PostgreSQL v.9.4.3
 
-```sh
-rake db:setup
+## Development and test gems:
+
+```ruby
+group :development, :test  do
+  gem 'pry-rails', '0.3.4'
+  gem 'pry-byebug', '3.3.0'
+  gem 'byebug', '8.2.2'
+  gem 'rails_best_practices'
+  gem 'rubocop', require: false
+  gem 'brakeman'
+  gem 'awesome_print'
+  gem 'rack-mini-profiler'
+end
 ```
+## Test gems
 
-and you're ready to go!
+```ruby
+group :test do
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'poltergeist'
+  gem 'shoulda-context'
+  gem 'shoulda-matchers', '~> 3.1.1', require: false
+  gem 'minitest-reporters', '~> 1.1.8'
+end
+```
+### Testing
 
-The site is deployed at <a href='http://tacocopter.herokuapp.com'/>tacocopter.herokuapp.com</a>
+Testing by minitest. Run test with rake.
 
-Slides are <a href=https://docs.google.com/presentation/d/1Y3gWwABlmSjAeZrBflAhUv-6m2nDRY8FYxvswJal4D0/edit?usp=sharing">here</a>
+### Optimization
 
+This app is not optimized: YAGNI
+If it grew significantly fragment caching would need to be implemented.
 
-Written in Ruby on Rails. If you'd like to contribute, just open an issue or open a pull request and notify Brad Urani.
+### Rubocop
 
+![Boson Foundry Landing Page](app/assets/images/rubocop.png) 
+
+[Copyright]( http://jet.mit-license.org/ ) by Jerrold R Thompson 
