@@ -1,8 +1,12 @@
 Broiled_Buffalo:
+  id: 1
   name: $LABEL
 Lobster_Supreme:
+  id: 2
   name: $LABEL
 Braised_Artichoke:
+  id: 3
   name: $LABEL
 Poblano_Mushroom:
+  id: 4
   name: $LABEL

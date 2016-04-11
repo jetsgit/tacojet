@@ -24,7 +24,7 @@ class StoresControllerTest < ActionController::TestCase
         session[:_csrf_token] = SecureRandom.base64(32)
       end
       before do
-        post :taco_heaven, taco_ids: [1,2,3], salsa_ids: [1,2,3], authenticity_token: set_form_authenticity_token 
+        post :taco_heaven, taco_ids: [1, 2, 3], salsa_ids: [1, 2, 3], authenticity_token: set_form_authenticity_token
       end
       it 'should bring us to taco_heaven after selecting our taco and salsa' do
         assert_response :success

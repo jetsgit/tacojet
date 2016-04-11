@@ -15,6 +15,7 @@ gem 'text-table'
 group :test do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
+  gem 'poltergeist'
   gem 'shoulda-context'
   gem 'shoulda-matchers', '~> 3.1.1', require: false
   gem 'minitest-reporters', '~> 1.1.8'

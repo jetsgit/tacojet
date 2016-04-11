@@ -6,8 +6,10 @@ require 'shoulda/matchers'
 require 'minitest/reporters'
 require 'minitest/spec'
 require 'minitest-rails'
-require 'minitest-rails-capybara'
+require 'minitest/rails/capybara'
+require 'capybara/poltergeist'
 
+Capybara.javascript_driver = :poltergeist
 module ActiveSupport
   class TestCase
     ActiveRecord::Migration.check_pending!
