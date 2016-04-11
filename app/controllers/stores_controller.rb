@@ -17,8 +17,7 @@ class StoresController < ApplicationController
   private
 
   def setup
-    set_salsas
-    set_tacos
+    set_selections
     set_ids
     @stores = Store.pluck :id
     @stores_iter = @stores.dup
@@ -30,7 +29,8 @@ class StoresController < ApplicationController
     @store_taco_ids = StoreTaco.all.pluck :store_id, :taco_id
   end
 
-  def set_tacos
+  def set_selections
+    @salsas = params.require(:salsa_ids)
     @tacos = params.require(:taco_ids)
   end
 
@@ -51,10 +51,6 @@ class StoresController < ApplicationController
       end
     end
     found_items
-  end
-
-  def set_salsas
-    @salsas = params.require(:salsa_ids)
   end
 
   def check_stores(selected, food_type)

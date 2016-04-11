@@ -2,3 +2,17 @@ one:
   store_id: 1
   salsa_id: 1
   spiciness: 5
+
+two:
+  store_id: 2
+  salsa_id: 1
+
+three:
+  store_id: 2
+  salsa_id: 3
+  spiciness: 8
+
+four:
+  store_id: 3
+  salsa_id: 3
+  spiciness: 9

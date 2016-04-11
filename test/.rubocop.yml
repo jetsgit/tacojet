@@ -1,2 +1,6 @@
 UselessAssignment:
   Enabled: false
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
+Metrics/LineLength:
+  Enabled: false

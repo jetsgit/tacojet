@@ -1,11 +1,17 @@
-one:
-  name: El Gordo
+El_Gordo:
+  name: $LABEL 
   city_id: 1
   sells_beer: true
   zagat_rating: 12
 
-two:
-  name: El Puerco Lloron
+El_Puerco_Lloron:
+  name: $LABEL
   city_id: 2
   sells_beer: false
   zagat_rating: 18
+
+Patron:
+  name: $LABEL
+  city_id: 3
+  sells_beer: true
+  zagat_rating: 8

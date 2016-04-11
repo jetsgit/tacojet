@@ -28,5 +28,5 @@ group :development, :test  do
   gem 'rubocop', require: false
   gem 'brakeman'
   gem 'awesome_print'
-  gem 'rack-mini-profiler'
+  # gem 'rack-mini-profiler'
 end

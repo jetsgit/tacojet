@@ -6,3 +6,11 @@ two:
   name: Langley
   allows_drones: false
 
+three:
+  name: Clinton
+  allows_drones: false
+
+four:
+  name: Coupeville
+  allows_drones: true
+
