@@ -1,32 +1,27 @@
 ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
+require 'rails/test_help'
+require 'shoulda/context'
+require 'shoulda/matchers'
 require 'minitest/reporters'
 require 'minitest/spec'
 require 'minitest-rails'
 require 'minitest-rails-capybara'
-require 'rails/test_help'
-require 'shoulda/context'
-require 'shoulda/matchers'
-
-module  ActiveSupport
-  class TestCase
-    fixtures :all
-    extend Minitest::Spec::DSL
-  end
-end
 
 module ActiveSupport
   class TestCase
     ActiveRecord::Migration.check_pending!
     fixtures :all
-    class << self
-      alias :context :describe
-    end
     extend MiniTest::Spec::DSL
     register_spec_type self do |desc|
       desc < ActiveRecord::Base if desc.is_a? Class
     end
   end
+end
+
+class ActionController::TestCase
+  fixtures :all
+  extend Minitest::Spec::DSL
 end
 
 Shoulda::Matchers.configure do |config|
@@ -72,6 +67,12 @@ module Minitest
       end
     end
   end
+  # module Rails
+  #   class Controller < Spec
+  #     include ActiveSupport::Testing::SetupAndTeardown
+  #     include ActionController::TestCase::Behavior
+  #   end
+  # end
 end
 
 reporter_options = { color: true } #  , slow_count: 5
