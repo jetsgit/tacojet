@@ -1,12 +1,10 @@
 one:
-  id: 1
   name: El Gordo
   city_id: 1
   sells_beer: true
   zagat_rating: 12
 
 two:
-  id: 2
   name: El Puerco Lloron
   city_id: 2
   sells_beer: false

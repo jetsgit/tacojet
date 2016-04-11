@@ -1,7 +1,10 @@
-salsa_a:
-  id: 1
-  name: Duckabush Special
-
-salsa_b:
-  id: 2
-  name: Gooeyduck Stomper
+Duckabush_Special:
+  name: $LABEL 
+Gooeyduck_Stomper:
+  name: $LABEL
+Ola_Jalepeno:
+  name: $LABEL
+Rojo_Real:
+  name: $LABEL
+Picante:
+  name: $LABEL

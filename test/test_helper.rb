@@ -2,6 +2,8 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'minitest/reporters'
 require 'minitest/spec'
+require 'minitest-rails'
+require 'minitest-rails-capybara'
 require 'rails/test_help'
 require 'shoulda/context'
 require 'shoulda/matchers'
@@ -16,12 +18,11 @@ end
 module ActiveSupport
   class TestCase
     ActiveRecord::Migration.check_pending!
-    # Note: You'll currently still have to declare
-    # fixtures explicitly in integration tests
-
     fixtures :all
+    class << self
+      alias :context :describe
+    end
     extend MiniTest::Spec::DSL
-
     register_spec_type self do |desc|
       desc < ActiveRecord::Base if desc.is_a? Class
     end

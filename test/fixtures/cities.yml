@@ -1,10 +1,8 @@
 one:
-  id: 1
   name: Olympia
   allows_drones: true
 
 two:
-  id: 2
   name: Langley
   allows_drones: false
 

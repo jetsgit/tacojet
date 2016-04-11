@@ -1,23 +1,17 @@
 class StoresController < ApplicationController
   before_action :setup, only: [:taco_heaven]
 
-  def tacos_salsas
-  end
-
   def taco_heaven
     check_stores @salsas, 'salsa'
     check_stores @tacos, 'taco'
     find_stores
-    @lunch = @lunch.uniq do |l|
-      l.city_id
-      l.name
-    end
+    find_lunch
   end
 
   def tacos_salsas
-    verify_taco
-    verify_salsa
-    binding.pry
+    set_ids
+    @tacos = verify_in_store Taco, @store_taco_ids
+    @salsas = verify_in_store Salsa, @store_salsa_ids
   end
 
   private
@@ -40,34 +34,18 @@ class StoresController < ApplicationController
     @tacos = params.require(:taco_ids)
   end
 
-  def verify_taco
-    tacos_in_store = []
-    set_ids
-    tacos = Taco.all.pluck :id
-    tacos.each do |taco|
-      @store_taco_ids.each do |store|
-        if taco == store[1]
-          tacos_in_store.push taco
+  def verify_in_store(klass, ids)
+    items_in_store = []
+    salsas = klass.all.pluck :id
+    salsas.each do |item|
+      ids.each do |store|
+        if item == store[1]
+          items_in_store.push item
           break
         end
       end
     end
-    @tacos = Taco.find tacos_in_store
-  end
-
-  def verify_salsa
-    salsas_in_store = []
-    set_ids
-    salsas = Salsa.all.pluck :id
-    salsas.each do |salsa|
-      @store_salsa_ids.each do |store|
-        if salsa == store[1]
-          salsas_in_store.push salsa
-          break
-        end
-      end
-    end
-    @salsas = Salsa.find salsas_in_store
+    klass.find items_in_store 
   end
 
   def set_salsas
@@ -105,6 +83,13 @@ class StoresController < ApplicationController
       @store_taco_ids.include? check
     else
       raise ArgumentError, 'Arg for ingredient can only be salsa or taco'
+    end
+  end
+
+  def find_lunch
+    @lunch = @lunch.uniq do |l|
+      l.city_id
+      l.name
     end
   end
 end

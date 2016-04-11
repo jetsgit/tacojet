@@ -1,19 +1,27 @@
 <div class="taco-heaven">
-   
     <h2 class="found-stores">Stores with Requested Tacos and Salsas</h2>
   <table  class="taco">
     <tr>
       <th>Store</th>
       <th>City</th>
     </tr>
-    <% @lunch.each do |lunch| %>
-      <tr><td>
-          <%= lunch.name %>
-        </td>
-        <td>
-          <%= lunch.city.name%>
-        </td>
+    <% if @lunch.empty? %>
+      <tr>
+        <td>Awww, Snap!</td>
       </tr>
-    <% end %>  
+      <tr>
+        <td>Looks like you are going to have to simplify or mix things up a bit.</td>
+      </tr>
+    <% else %>  
+      <% @lunch.each do |lunch| %>
+        <tr><td>
+            <%= lunch.name %>
+          </td>
+          <td>
+            <%= lunch.city.name%>
+          </td>
+        </tr>
+      <% end %>  
+    <% end %>
   </table>
 </div>
