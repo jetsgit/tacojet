@@ -19,9 +19,11 @@ module ActiveSupport
   end
 end
 
-class ActionController::TestCase
-  fixtures :all
-  extend Minitest::Spec::DSL
+module ActionController
+  class TestCase
+    fixtures :all
+    extend Minitest::Spec::DSL
+  end
 end
 
 Shoulda::Matchers.configure do |config|

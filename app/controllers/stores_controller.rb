@@ -35,17 +35,22 @@ class StoresController < ApplicationController
   end
 
   def verify_in_store(klass, ids)
-    items_in_store = []
-    salsas = klass.all.pluck :id
-    salsas.each do |item|
+    items = klass.all.pluck :id
+    items_in_store = iter_items items, ids
+    klass.find items_in_store
+  end
+
+  def iter_items(items, ids)
+    found_items = []
+    items.each do |item|
       ids.each do |store|
         if item == store[1]
-          items_in_store.push item
+          found_items.push item
           break
         end
       end
     end
-    klass.find items_in_store 
+    found_items
   end
 
   def set_salsas
