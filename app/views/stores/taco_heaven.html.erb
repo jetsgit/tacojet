@@ -24,4 +24,10 @@
       <% end %>
     <% end %>
   </table>
+
+  <% if @lunch.empty? %>
+  <div class="nav">
+    <%= link_to "Try a Different Combo of Tacos/Salsas", tacos_salsas_path %>
+  </div>
+  <% end %>
 </div>
