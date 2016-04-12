@@ -22,12 +22,12 @@ group :test do
 end
 
 group :development, :test  do
-  # gem 'pry-rails', '0.3.4'
-  # gem 'pry-byebug', '3.3.0'
-  # gem 'byebug', '8.2.2'
-  # gem 'rails_best_practices'
-  # gem 'rubocop', require: false
-  # gem 'brakeman'
-  # gem 'awesome_print'
- # gem 'rack-mini-profiler'
+  gem 'pry-rails', '0.3.4'
+  gem 'pry-byebug', '3.3.0'
+  gem 'byebug', '8.2.2'
+  gem 'rails_best_practices'
+  gem 'rubocop', require: false
+  gem 'brakeman'
+  gem 'awesome_print'
+ gem 'rack-mini-profiler'
 end
