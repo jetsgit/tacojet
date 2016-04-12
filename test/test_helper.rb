@@ -71,12 +71,6 @@ module Minitest
       end
     end
   end
-  # module Rails
-  #   class Controller < Spec
-  #     include ActiveSupport::Testing::SetupAndTeardown
-  #     include ActionController::TestCase::Behavior
-  #   end
-  # end
 end
 
 reporter_options = { color: true } #  , slow_count: 5
