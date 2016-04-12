@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160401045130) do
+ActiveRecord::Schema.define(version: 20160412025841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,11 +31,17 @@ ActiveRecord::Schema.define(version: 20160401045130) do
     t.integer "spiciness"
   end
 
+  add_index "store_salsas", ["salsa_id"], name: "index_store_salsas_on_salsa_id", using: :btree
+  add_index "store_salsas", ["store_id"], name: "index_store_salsas_on_store_id", using: :btree
+
   create_table "store_tacos", force: :cascade do |t|
     t.integer "store_id"
     t.integer "taco_id"
     t.decimal "price",    precision: 6, scale: 2
   end
+
+  add_index "store_tacos", ["store_id"], name: "index_store_tacos_on_store_id", using: :btree
+  add_index "store_tacos", ["taco_id"], name: "index_store_tacos_on_taco_id", using: :btree
 
   create_table "stores", force: :cascade do |t|
     t.string  "name",         limit: 255
@@ -43,6 +49,8 @@ ActiveRecord::Schema.define(version: 20160401045130) do
     t.boolean "sells_beer"
     t.integer "zagat_rating"
   end
+
+  add_index "stores", ["city_id"], name: "index_stores_on_city_id", using: :btree
 
   create_table "tacos", force: :cascade do |t|
     t.string  "name",       limit: 255

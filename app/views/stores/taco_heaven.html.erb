@@ -12,7 +12,7 @@
       <tr>
         <td>Looks like you are going to have to simplify or mix things up a bit.</td>
       </tr>
-    <% else %>  
+    <% else %>
       <% @lunch.each do |lunch| %>
         <tr><td>
             <%= lunch.name %>
@@ -21,7 +21,7 @@
             <%= lunch.city.name%>
           </td>
         </tr>
-      <% end %>  
+      <% end %>
     <% end %>
   </table>
 </div>
