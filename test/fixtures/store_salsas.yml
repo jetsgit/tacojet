@@ -6,6 +6,7 @@ one:
 two:
   store_id: 2
   salsa_id: 2
+  spiciness: 3
 
 three:
   store_id: 3
