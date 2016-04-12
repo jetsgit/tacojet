@@ -4,7 +4,7 @@
 # drones not allowed.
 
 class CityController < ApplicationController
-  before_save :default_values
+  # before_save :default_values
   attr_accessor :allows_drones, :name
 
   private
