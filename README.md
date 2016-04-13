@@ -13,7 +13,6 @@ TACOCOPTER
 group :development, :test  do
   gem 'pry-rails', '0.3.4'
   gem 'pry-byebug', '3.3.0'
-  gem 'byebug', '8.2.2'
   gem 'rails_best_practices'
   gem 'rubocop', require: false
   gem 'brakeman'
@@ -31,6 +30,7 @@ group :test do
   gem 'shoulda-context'
   gem 'shoulda-matchers', '~> 3.1.1', require: false
   gem 'minitest-reporters', '~> 1.1.8'
+  gem 'rack-mini-profiler'
 end
 ```
 ### Testing
