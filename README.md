@@ -30,7 +30,7 @@ group :test do
   gem 'shoulda-context'
   gem 'shoulda-matchers', '~> 3.1.1', require: false
   gem 'minitest-reporters', '~> 1.1.8'
-  gem 'rack-mini-profiler'
+  gem 'simplecov', require: false
 end
 ```
 ### Testing

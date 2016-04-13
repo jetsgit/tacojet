@@ -29,4 +29,5 @@ group :development, :test  do
   gem 'brakeman'
   gem 'awesome_print'
   gem 'rack-mini-profiler'
+  gem 'simplecov', require: false
 end
