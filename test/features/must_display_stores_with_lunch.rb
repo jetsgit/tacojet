@@ -1,6 +1,6 @@
 require 'test_helper'
 
-feature 'Must display stores where lunch can be purchased after selectin tacos and salsa' do
+feature 'Must display stores where lunch can be purchased after selecting tacos and salsa' do
   scenario 'Hungry dude/dudess selects tacos/salsas and is displayed list of stores and cities' do
     visit '/'
     page.find(:xpath, "//input[@name='salsa_ids[]'][@value='1']").set(true)

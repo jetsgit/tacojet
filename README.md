@@ -35,7 +35,15 @@ end
 ```
 ### Testing
 
-Testing by minitest. Run test with rake.
+Testing by minitest. Run tests with 
+
+```
+$ rake
+```
+at command line. I actually run targeted tests with **vim** in a
+Tmux session, using the **vimux** and **vim-test** plugins. This in 
+combination with Zeus (which I favor over Spring) creates a very
+agile testing environment. 
 
 ### Optimization
 

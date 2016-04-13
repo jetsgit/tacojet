@@ -1,3 +1,18 @@
+# test_helper.rb
+# This helper is working with:
+# Rails v.4.2.5.2
+# Ruby v.2.2.2p95
+#
+# Following type of tests are working:
+# 'Spec-style minitest':
+#   Controller
+#   Model
+#   Integration
+#   Feature
+#
+# Using: Fixtures
+# Using: Shoulda-Matchers
+
 ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
