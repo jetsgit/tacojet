@@ -44,6 +44,11 @@ If it grew significantly fragment caching would need to be implemented.
 
 ### Rubocop
 
-![Boson Foundry Landing Page](app/assets/images/rubocop.png) 
+![Result of running Rubocop](app/assets/images/rubocop.png) 
+
+### Brakeman
+
+
+![Result of running Brakeman](app/assets/images/brakeman.png) 
 
 [Copyright]( http://jet.mit-license.org/ ) by Jerrold R Thompson 
