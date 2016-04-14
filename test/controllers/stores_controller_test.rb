@@ -18,6 +18,12 @@ class StoresControllerTest < ActionController::TestCase
       it 'should use the correct template' do
         assert_template :tacos_salsas
       end
+      it 'assigns tacos instance variable' do
+        assert_not_nil assigns :tacos
+      end
+      it 'assigns salsas instance variable' do
+        assert_not_nil assigns :salsas
+      end
     end
     describe 'taco_heaven' do
       def set_form_authenticity_token
@@ -25,6 +31,9 @@ class StoresControllerTest < ActionController::TestCase
       end
       before do
         post :taco_heaven, taco_ids: [1, 2, 3], salsa_ids: [1, 2, 3], authenticity_token: set_form_authenticity_token
+      end
+      it 'should assign to lunch instance variable' do
+        assert_not_nil assigns :lunch
       end
       it 'should bring us to taco_heaven after selecting our taco and salsa' do
         assert_response :success
