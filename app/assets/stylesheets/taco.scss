@@ -1,54 +1,30 @@
-table.taco {
-  th {
-    text-align: left
-  }
-  td {
-    width: 300px
-  }
+.row {
+  margin-top: 2em
 }
-
 .taco-warning {
   color: red;
   font-weight: bold;
   padding-left: 40px
 }
 
-div.tacos {
-  position: relative;
-  float: left
+.small-4 {
+  margin-left: 2em;
 }
 
-div.salsas {
-  position: relative;
-  left: 60px
-}
 
-div.taco-heaven {
-  position: relative;
-  top: 60px;
-  left: 300px
-}
-
-div.container {
-  position: relative;
-  top: 40px;
-  left: 300px
-}
-h2 {
-  margin: 0
+.checkbox_taco input[type="checkbox"] {
+  display: block;
+  border-radius: 8px;
 }
 
 h2.found-stores {
-  margin-bottom: 30px
+  text-align: center;
 }
 
-h2.store-tacos {
-  margin-bottom: 20px
+.result {
+  font-weight: bold;
 }
 
-td {
-  width: 360px
-}
 
 .nav {
   padding-top: 40px;
