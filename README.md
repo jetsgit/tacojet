@@ -1,7 +1,7 @@
 TACOCOPTER
 =========
 
-### A demo of using has_many through, belongs_to relationships. Also demo of feature testing with Capybara.
+### Demo of Sane Query's with has_many :through Relationships.
 
 * Ruby v.2.2.2p95
 * Rails v.4.2.5.2
