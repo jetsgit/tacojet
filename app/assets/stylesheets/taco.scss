@@ -1,5 +1,5 @@
 .row {
-  margin-top: 2em
+  margin-top: 2em;
 }
 .taco-warning {
   color: red;
@@ -11,12 +11,10 @@
   margin-left: 2em;
 }
 
-
-.checkbox_taco input[type="checkbox"] {
-  display: block;
-  border-radius: 8px;
+.select {
+  position: relative;
+  white-space: nowrap
 }
-
 h2.found-stores {
   text-align: center;
 }
@@ -24,7 +22,6 @@ h2.found-stores {
 .result {
   font-weight: bold;
 }
-
 
 .nav {
   padding-top: 40px;
