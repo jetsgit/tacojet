@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'rails_12factor'
 gem 'text-table'
 
+gem 'foundation-rails'
+
 group :test do
   gem 'minitest-rails'
   gem 'minitest-rails-capybara'
