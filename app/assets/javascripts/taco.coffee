@@ -8,5 +8,5 @@ $.fn.TacoError = ->
       'salsa_ids[]': 'Grab some Salsa!'
     errorPlacement: (label, el) ->
       label.addClass 'taco-warning'
-      $(el).parent().append label
+      $(el).parents('tr:first').before(label)
 
