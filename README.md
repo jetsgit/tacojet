@@ -3,6 +3,9 @@ TACOJET
 
 ### Demo of Sane Query's with has_many :through Relationships.
 
+I run the test suite locally using tmux and Zeus, which allows me to
+run targeted tests in a very fast test environment
+
 * Ruby v.2.2.2p95
 * Rails v.4.2.5.2
 * PostgreSQL v.9.4.3
